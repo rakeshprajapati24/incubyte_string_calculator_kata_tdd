@@ -13,5 +13,8 @@ RSpec.describe StringCalculator do
 		it "newlines between numbers as delimiters" do
 		  expect(described_class.addition("1\n2,3")).to eq(6)
 		end
+		it "for delimiter specified like //;\n1;2" do
+		  expect(described_class.addition("//;\n1;2")).to eq(3)
+		end
   end
 end
