@@ -58,5 +58,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-# gem "rspec-rails", "~> 8.0", :groups => [:development, :test]
