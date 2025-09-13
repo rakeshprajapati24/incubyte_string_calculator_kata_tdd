@@ -16,5 +16,9 @@ RSpec.describe StringCalculator do
 		it "for delimiter specified like //;\n1;2" do
 		  expect(described_class.addition("//;\n1;2")).to eq(3)
 		end
+		it "raises an exception for a negative number" do
+		  expect { described_class.addition("-1,2") }
+		    .to raise_error(ArgumentError, /negative numbers not allowed/)
+		end
   end
 end
